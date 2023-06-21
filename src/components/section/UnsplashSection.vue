@@ -59,6 +59,7 @@ export default {
 </script>
 
 <style lang="scss">
+@import url(../../assets/scss/setting/mixins.scss);
 //unsplash__section
 .unsplash__wrap {
   overflow: hidden;

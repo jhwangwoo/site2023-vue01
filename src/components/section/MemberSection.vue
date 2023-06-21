@@ -44,6 +44,7 @@ export default {
 </script>
 
 <style lang="scss">
+@import url(../../assets/scss/setting/mixins.scss);
 .members__wrap {
   h3 {
     margin-bottom: 10px;

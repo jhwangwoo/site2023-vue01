@@ -55,6 +55,7 @@ export default {
 </script>
 
 <style lang="scss">
+@import url(../../assets/scss/setting/mixins.scss);
 //intro__wrap
 .intro__wrap {
 }

@@ -32,7 +32,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import url();
+@import url(../../assets/scss/setting/mixins.scss);
 .movie__cont {
   ul {
     columns: 4;

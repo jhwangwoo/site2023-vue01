@@ -90,6 +90,7 @@ export default {
 </script>
 
 <style lang="scss">
+@import url(../../assets/scss/setting/mixins.scss);
 .port__wrap {
   h3 {
     margin-bottom: 10px;
