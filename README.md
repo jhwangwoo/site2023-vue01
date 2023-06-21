@@ -1,24 +1,7 @@
 # site-vue01
 
-## Project setup
-```
-npm install
-```
+## vue.js
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+vue.js를 이용해서 사이트를 만들어보앗습니다
+vue3버전을 설치했고,
+swiper을 사용해서 슬라이드를 구현했습니다.
