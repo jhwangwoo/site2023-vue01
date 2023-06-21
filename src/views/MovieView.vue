@@ -28,7 +28,7 @@ export default {
     //setup()으로 넣어야함
     const movies = ref([]);
     const searchs = ref([]);
-    const search = ref("marvel");
+    const search = ref([]);
 
     const TopMovies = async () => {
       await fetch(
