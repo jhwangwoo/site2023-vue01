@@ -2,7 +2,10 @@
   <div class="youtube__cont container mb50">
     <ul>
       <li v-for="(youtube, index) in youtubes" v-bind:key="index">
-        <a :href="`https://www.youtube.com/watch?v=${youtube.id.videoId}`">
+        <a
+          :href="`https://www.youtube.com/watch?v=${youtube.id.videoId}`"
+          target="_blank"
+        >
           <img
             :src="youtube.snippet.thumbnails.medium.url"
             :alt="youtube.snippet.title"

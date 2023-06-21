@@ -2,7 +2,7 @@
   <div class="unsplash__cont container mb50">
     <ul>
       <li v-for="(unsplash, index) in unsplashs" v-bind:key="index">
-        <a :href="`https://unsplash.com/photos/${unsplash.id}`">
+        <a :href="`https://unsplash.com/photos/${unsplash.id}`" target="_blank">
           <img :src="unsplash.urls.regular" :alt="unsplash.alt_description" />
         </a>
       </li>
