@@ -6,7 +6,13 @@
         :modules="modules"
         :slides-per-view="1"
         :space-between="50"
-        :autoplay="true"
+        navigation
+        :pagination="{ clickable: true }"
+        :scrollbar="{ draggable: true }"
+        :autoplay="{
+          delay: 2500,
+          disableOnInteraction: false,
+        }"
         @swiper="onSwiper"
         @slideChange="onSlideChange"
       >
@@ -19,9 +25,9 @@
                 <a href="#" class="more button-red">더 알아보기</a>
               </div>
               <div class="img" aria-label="hidden">
-                <img :src="slider.iconImage1" :alt="slider.title" />
-                <img :src="slider.iconImage2" :alt="slider.title" />
-                <img :src="slider.iconImage3" :alt="slider.title" />
+                <img :src="slider.iconimage1" :alt="slider.title" />
+                <img :src="slider.iconimage2" :alt="slider.title" />
+                <img :src="slider.iconimage3" :alt="slider.title" />
               </div>
               <div class="circle" aria-label="hidden">
                 <span class="circle c1"></span>
@@ -57,10 +63,11 @@
   </section>
 </template>
 <script>
+import { Navigation, Pagination, A11y, Autoplay } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/vue";
-import { Autoplay } from "swiper";
 import "swiper/css";
-import "swiper/css/autoplay";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 export default {
   props: {
     attr: {
@@ -81,16 +88,16 @@ export default {
         {
           title: "science <br />Technology",
           desc: "과학은 어떤 것이든 진실을 찾고<br/>이해하기 위해 끊임없이 탐구하는 모험입니다.",
-          iconimage1: "./images/slider/slidericon01.png",
-          iconimage2: "./images/slider/slidericon02.png",
-          iconimage3: "./images/slider/slidericon03.png",
+          iconimage1: "./images/slider/slidericon04.png",
+          iconimage2: "./images/slider/slidericon05.png",
+          iconimage3: "./images/slider/slidericon06.png",
         },
         {
           title: "science <br />Technology",
           desc: "과학은 어떤 것이든 진실을 찾고<br />이해하기 위해 끊임없이 탐구하는 모험입니다.",
-          iconimage1: "./images/slider/slidericon01.png",
-          iconimage2: "./images/slider/slidericon02.png",
-          iconimage3: "./images/slider/slidericon03.png",
+          iconimage1: "./images/slider/slidericon07.png",
+          iconimage2: "./images/slider/slidericon08.png",
+          iconimage3: "./images/slider/slidericon09.png",
         },
       ],
     };
@@ -109,7 +116,7 @@ export default {
     return {
       onSwiper,
       onSlideChange,
-      modules: [Autoplay],
+      modules: [Navigation, Pagination, A11y, Autoplay],
     };
   },
 };
