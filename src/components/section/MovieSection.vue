@@ -46,7 +46,7 @@ export default {
   overflow: hidden;
 }
 .movie__inner {
-  height: 1101px;
+  height: 1100px;
 }
 .movie__text {
   h3 {
