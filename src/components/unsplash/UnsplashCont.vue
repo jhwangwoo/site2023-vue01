@@ -22,7 +22,6 @@ export default {
 </script>
 
 <style lang="scss">
-//Unsplash__cont
 .unsplash__cont {
   ul {
     column-count: 4;

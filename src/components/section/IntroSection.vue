@@ -56,7 +56,6 @@ export default {
 
 <style lang="scss">
 @import "../../assets/scss/setting/mixins.scss";
-//intro__wrap
 .intro__wrap {
 }
 .intro__inner {

@@ -33,7 +33,6 @@
 </template>
 
 <style lang="scss">
-//header__wrap
 .header__wrap {
 }
 .header__inner {

@@ -124,9 +124,8 @@ export default {
 
 <style lang="scss">
 @import "../../assets/scss/setting/mixins.scss";
-//slider__wrap
+
 .slider__wrap {
-  // background-color: #ccc;
 }
 .slider__inner {
   position: relative;

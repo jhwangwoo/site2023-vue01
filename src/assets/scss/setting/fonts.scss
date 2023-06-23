@@ -330,7 +330,6 @@
   font-family: "TheJamsil";
 }
 
-//폰트 굵기 반복문
 @for $i from 1 through 9 {
   $weight: $i * 100;
   .score#{$i} {

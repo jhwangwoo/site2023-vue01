@@ -60,7 +60,7 @@ export default {
 
 <style lang="scss">
 @import "../../assets/scss/setting/mixins.scss";
-//unsplash__section
+
 .unsplash__wrap {
   overflow: hidden;
 }
@@ -96,7 +96,6 @@ export default {
   }
 }
 
-//unsplash__page
 .unsplash__page {
 }
 .unsplash__slider {

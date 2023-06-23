@@ -43,7 +43,7 @@ export default {
       overflow: hidden;
       white-space: nowrap;
       text-overflow: ellipsis;
-      -webkit-line-clamp: 1; /* 라인수 */
+      -webkit-line-clamp: 1;
       -webkit-box-orient: vertical;
       word-wrap: break-word;
       .title {

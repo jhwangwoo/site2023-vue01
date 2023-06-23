@@ -59,7 +59,6 @@ export default {
 </script>
 <style lang="scss">
 @import "../../assets/scss/setting/mixins.scss";
-//youtube__section
 
 .youtube__wrap {
   overflow: hidden;
@@ -96,7 +95,6 @@ export default {
   }
 }
 
-//youtube__page
 .youtube__page {
 }
 .youtube__slider {

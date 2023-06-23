@@ -59,14 +59,11 @@ export default {
 
     .member__header {
       border: 2px solid var(--color_body);
-      // margin-top: -20px;
-      // padding: 20px;
       img {
         width: 100%;
       }
     }
     .member__body {
-      // margin-top: -180px;
       padding: 15px 10px;
       background: #000;
       color: #fff;
