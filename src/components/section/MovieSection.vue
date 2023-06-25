@@ -80,9 +80,6 @@ export default {
 
 .movie__page {
 }
-.movie__slider {
-  display: none;
-}
 .movie__search {
   text-align: center;
   margin-bottom: 50px;

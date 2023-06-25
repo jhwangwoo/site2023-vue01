@@ -97,9 +97,6 @@ export default {
 
 .youtube__page {
 }
-.youtube__slider {
-  display: none;
-}
 .youtube__search {
   text-align: center;
   margin-bottom: 50px;

@@ -15,7 +15,7 @@
             <router-Link to="/intro">소개</router-Link>
           </li>
           <li>
-            <router-Link to="/port">노벨상 수상</router-Link>
+            <router-Link to="/port">과학자</router-Link>
           </li>
           <li>
             <router-Link to="/youtube">유튜브</router-Link>

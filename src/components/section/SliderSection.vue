@@ -1,6 +1,6 @@
 <template>
   <section id="sliderSection" :class="attr">
-    <div class="slider__inner">
+    <div class="slider__inner container">
       <h2 class="blind">배너 슬라이더</h2>
       <swiper
         :modules="modules"
@@ -8,7 +8,6 @@
         :space-between="50"
         navigation
         :pagination="{ clickable: true }"
-        :scrollbar="{ draggable: true }"
         :autoplay="{
           delay: 2500,
           disableOnInteraction: false,
@@ -132,6 +131,7 @@ export default {
 
   .slider__img {
     .slider {
+      height: 500px;
       .text {
         h3 {
           font-size: 110px;

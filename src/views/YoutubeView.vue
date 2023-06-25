@@ -1,48 +1,56 @@
 <template>
-  <ContTitle title="youtube" />
-  <YoutubeSlider />
-  <YoutubeSearch />
-  <YoutubeTag />
-  <YoutubeCont :youtubes="youtubes" />
+  <div>
+    <ContTitle title="youtube" />
+    <YoutubeSearch @onSearch="search" />
+    <YoutubeTag @onSearch="search" />
+    <YoutubeCont :youtubes="youtubes" />
+  </div>
 </template>
 
 <script>
 import ContTitle from "@/components/layout/ContTitle.vue";
-import YoutubeSlider from "@/components/youtube/YoutubeSlider.vue";
 import YoutubeSearch from "@/components/youtube/YoutubeSearch.vue";
 import YoutubeTag from "@/components/youtube/YoutubeTag.vue";
 import YoutubeCont from "@/components/youtube/YoutubeCont.vue";
 
-import { ref } from "vue"; //useEffect같은개념
-
 export default {
   components: {
     ContTitle,
-    YoutubeSlider,
     YoutubeSearch,
     YoutubeTag,
     YoutubeCont,
   },
-  setup() {
-    //setup()으로 넣어야함
-    const youtubes = ref([]);
-
-    const Youtube = async () => {
-      await fetch(
-        "https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=30&q=science&type=video&key=AIzaSyA574D8uxBhHYpAp6Xu760fh7tV3Fitgh8"
-      )
-        .then((response) => response.json())
-        .then((result) => {
-          console.log(result.items);
-          youtubes.value = result.items;
-        })
-        .catch((error) => console.log("error", error));
-    };
-    Youtube();
+  data() {
     return {
-      youtubes,
-      Youtube,
+      youtubes: [],
     };
+  },
+  methods: {
+    async search(query) {
+      try {
+        const response = await fetch(
+          `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=30&q=${query}&type=video&key=AIzaSyA574D8uxBhHYpAp6Xu760fh7tV3Fitgh8`
+        );
+        const result = await response.json();
+        this.youtubes = result.items;
+      } catch (error) {
+        console.log("error", error);
+      }
+    },
+    async fetchYoutubes() {
+      try {
+        const response = await fetch(
+          "https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=30&q=science&type=video&key=AIzaSyA574D8uxBhHYpAp6Xu760fh7tV3Fitgh8"
+        );
+        const result = await response.json();
+        this.youtubes = result.items;
+      } catch (error) {
+        console.log(error);
+      }
+    },
+  },
+  mounted() {
+    this.fetchYoutubes();
   },
 };
 </script>

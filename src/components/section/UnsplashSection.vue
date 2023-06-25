@@ -98,9 +98,6 @@ export default {
 
 .unsplash__page {
 }
-.unsplash__slider {
-  display: none;
-}
 .unsplash__search {
   text-align: center;
   margin-bottom: 50px;
@@ -141,7 +138,7 @@ export default {
     justify-content: space-between;
     margin-bottom: 100px;
     li {
-      width: 31.333%;
+      // width: 31.333%;
       margin-bottom: 4%;
 
       span {

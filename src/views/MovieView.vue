@@ -1,8 +1,8 @@
 <template>
   <ContTitle title="movies" />
-  <MovieSlider />
-  <MovieSearch />
-  <MovieTag />
+  <MovieSlider :movies="movies" />
+  <MovieSearch @search="search" />
+  <MovieTag @tags="tags" />
   <MovieCont :movies="movies" />
 </template>
 
@@ -13,7 +13,7 @@ import MovieSearch from "@/components/movie/MovieSearch.vue";
 import MovieTag from "@/components/movie/MovieTag.vue";
 import MovieCont from "@/components/movie/MovieCont.vue";
 
-import { ref } from "vue"; //useEffect같은개념
+// import { ref } from "vue"; //useEffect같은개념
 
 export default {
   components: {
@@ -23,30 +23,48 @@ export default {
     MovieTag,
     MovieCont,
   },
-
-  setup() {
-    //setup()으로 넣어야함
-    const movies = ref([]);
-    const searchs = ref([]);
-    const search = ref([]);
-
-    const TopMovies = async () => {
-      await fetch(
-        `https://api.themoviedb.org/3/movie/popular?api_key=d318289536044275f4abc5923f180d7f&query=${search.value}`
-      )
-        .then((response) => response.json())
-        .then((result) => {
-          movies.value = result.results;
-          searchs.value = result.results;
-        })
-        .catch((error) => console.log("error", error));
-    };
-    TopMovies();
+  data() {
     return {
-      movies,
-      searchs,
-      TopMovies,
+      movies: [],
     };
+  },
+  methods: {
+    async tags(query) {
+      try {
+        const response = await fetch(
+          `${query}?api_key=d318289536044275f4abc5923f180d7f`
+        );
+        const result = await response.json();
+        this.movies = result.results;
+      } catch (error) {
+        console.log(error);
+      }
+    },
+    async search(query) {
+      try {
+        const response = await fetch(
+          `https://api.themoviedb.org/3/search/movie?api_key=d318289536044275f4abc5923f180d7f&query=${query}`
+        );
+        const result = await response.json();
+        this.movies = result.results;
+      } catch (error) {
+        console.log("error", error);
+      }
+    },
+    async fetchPopularMovies() {
+      try {
+        const response = await fetch(
+          "https://api.themoviedb.org/3/movie/popular?api_key=d318289536044275f4abc5923f180d7f"
+        );
+        const result = await response.json();
+        this.movies = result.results;
+      } catch (error) {
+        console.log("error", error);
+      }
+    },
+  },
+  created() {
+    this.fetchPopularMovies();
   },
 };
 </script>
