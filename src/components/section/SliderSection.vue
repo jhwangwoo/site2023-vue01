@@ -1,23 +1,23 @@
 <template>
   <section id="sliderSection" :class="attr">
-    <div class="slider__inner container">
+    <div class="slider__inner containers">
       <h2 class="blind">배너 슬라이더</h2>
-      <swiper
-        :modules="modules"
-        :slides-per-view="1"
-        :space-between="50"
-        navigation
-        :pagination="{ clickable: true }"
-        :autoplay="{
-          delay: 2500,
-          disableOnInteraction: false,
-        }"
-        @swiper="onSwiper"
-        @slideChange="onSlideChange"
-      >
-        <swiper-slide v-for="(slider, index) in sliders" :key="index">
-          <div class="slider__img">
-            <div class="slider s1">
+      <div class="slider__img">
+        <swiper
+          :modules="modules"
+          :slides-per-view="1"
+          :space-between="50"
+          navigation
+          :pagination="{ clickable: true }"
+          :autoplay="{
+            delay: 2500,
+            disableOnInteraction: false,
+          }"
+          @swiper="onSwiper"
+          @slideChange="onSlideChange"
+        >
+          <swiper-slide v-for="(slider, index) in sliders" :key="index">
+            <div class="slider s1 container">
               <div class="text">
                 <h3 v-html="slider.title"></h3>
                 <p v-html="slider.desc"></p>
@@ -36,9 +36,9 @@
                 <span class="circle c5"></span>
               </div>
             </div>
-          </div>
-        </swiper-slide>
-      </swiper>
+          </swiper-slide>
+        </swiper>
+      </div>
       <!-- <div class="slider__btn">
         <router-Link to="/" class="left"
           ><span class="ir">이전이미지</span></router-Link
