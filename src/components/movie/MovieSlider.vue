@@ -16,7 +16,6 @@
         modifier: 2,
         slideShadows: true,
       }"
-      :pagination="true"
       :modules="modules"
       class="mySwiper"
     >
