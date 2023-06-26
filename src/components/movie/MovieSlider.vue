@@ -69,7 +69,6 @@ export default {
 
 <style lang="scss">
 .movie__slider {
-  margin: 50px 0 100px 0;
   .swiper {
     width: 40%;
     padding-top: 50px;
