@@ -17,7 +17,7 @@
       >
         <swiper-slide v-for="(slider, index) in sliders" :key="index">
           <div class="slider__img">
-            <div class="slider s1 container">
+            <div class="slider s1">
               <div class="text">
                 <h3 v-html="slider.title"></h3>
                 <p v-html="slider.desc"></p>

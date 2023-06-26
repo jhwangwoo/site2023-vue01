@@ -1,5 +1,5 @@
 <template>
-  <section class="movie__slider container">
+  <section class="movie__slider">
     <swiper
       :effect="'coverflow'"
       :grabCursor="true"
