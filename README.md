@@ -1,8 +1,8 @@
  <h1>vue.js를 이용해서 사이트를 만들어보앗습니다</h1>
- 
- [vuesiteLink](https://jhw2023-vue-site.netlify.app/)
 
-[이미지](https://raw.githubusercontent.com/jhwangwoo/site2023-vue01/main/public/images/vue_img.pnga)
+[vuesiteLink](https://jhw2023-vue-site.netlify.app/)
+
+[이미지](https://raw.githubusercontent.com/jhwangwoo/site2023-vue01/main/public/images/vue_img.png)
 
  <h1>API 사용 방법</h1>
 
