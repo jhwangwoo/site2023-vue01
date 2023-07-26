@@ -6,12 +6,6 @@
 
  <h1>API 사용 방법</h1>
 
-<p>useEffect: 함수형 컴포넌트에서 부수 효과(side effect)를 수행할 수 있는 React 훅입니다. 컴포넌트의 라이프사이클에 따른 동작을 정의하거나 외부 데이터를 가져올 수 있습니다. </p>
-
-<p>useState: 함수형 컴포넌트에서 상태(state)를 추가하고, 해당 상태 값을 업데이트하는 React 훅입니다. 상태값을 가지고 동적으로 컴포넌트를 업데이트하고 관리할 수 있습니다.</p>
-
-<p>fetch와 async/await: 웹 API를 사용하여 서버로부터 데이터를 가져오는 방법 중 하나로, 비동기 처리를 위해 사용됩니다. fetch 함수는 Promise를 반환하고, async/await는 비동기 코드를 동기 코드처럼 작성할 수 있게 도와줍니다.</p>
-
   <h2>영화 정보 애플리케이션</h2>
   <p>사용한 API: TMDb (The Movie Database) API</p>
 
